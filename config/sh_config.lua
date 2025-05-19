@@ -1,11 +1,27 @@
+Config = Config or {}
+
 --[[ 
-    Shared Configuration
-    This file contains shared configuration settings for the game.
-    This can be accessed by both the server and client.
+    -- Main Map Bounds & Cayo Bounds --
     
-    Do not store sensitive information here.
+    We recommend not changing these values unless you know what you're doing.
+    The map bounds setup now are best performance wise and should be left alone. 
 ]]--
+Config.MapBounds = {
+    { x = 1000.0, y = 1000.0 },
+    { x = 1000.0, y = 3000.0 },
+    { x = 3000.0, y = 3000.0 },
+    { x = 3000.0, y = 1000.0 },
+}
 
-SharedConfig = {}
+Config.CayoBounds = {
+    { x = 1000.0, y = 1000.0 },
+    { x = 1000.0, y = 3000.0 },
+    { x = 3000.0, y = 3000.0 },
+    { x = 3000.0, y = 1000.0 },
+}
 
-SharedConfig.ServerName = 'Server Name' -- The name of your server (this is an example)
+Config.ChunkSize = 100
+
+--[[ 
+    -- Other Config Options --
+]]
