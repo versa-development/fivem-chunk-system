@@ -2,26 +2,26 @@ fx_version 'cerulean'
 game 'gta5'
 lua54 'yes'
 
+name 'versa-chunk-system'
 author 'Versa Development'
 version '0.1'
+repository 'https://github.com/versa-development/fivem-chunk-system/'
 description 'Dynamic chunk system for FiveM — spawn objects & peds efficiently like Minecraft!'
 
-shared_scripts {
-    '@ox_lib/init.lua',
-    'config/sh_*.lua',
-    'shared/sh_*.lua'
-}
-
-client_scripts {
-    'client/cl_*.lua'
-}
-
-server_scripts {
-    '@oxmysql/lib/MySQL.lua',
-    'config/sv_*.lua',
-    'server/sv_*.lua'
-}
-
 dependencies {
-    'ox_lib',
+    '/onesync',
+    'ox_lib'
 }
+
+shared_script '@ox_lib/init.lua'
+
+files {
+    'data/config.lua',
+    'modules/**/client.lua',
+    'modules/**/server.lua',
+    'modules/**/shared.lua',
+    'utils/*.lua'
+}
+
+client_script 'init.lua'
+server_script 'init.lua'
