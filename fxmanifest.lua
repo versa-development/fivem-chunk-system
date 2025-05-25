@@ -15,13 +15,19 @@ dependencies {
 
 shared_script '@ox_lib/init.lua'
 
+server_scripts {
+  'init.lua',
+  'runtime/server/sv_*.lua',
+}
+
+client_scripts {
+  'init.lua',
+  'runtime/client/cl_*.lua',
+}
+
 files {
   'data/config.lua',
   'modules/**/client.lua',
   'modules/**/server.lua',
-  'modules/**/shared.lua',
   'utils/*.lua'
 }
-
-client_script 'init.lua'
-server_script 'init.lua'
