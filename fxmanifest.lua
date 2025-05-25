@@ -17,12 +17,12 @@ shared_script '@ox_lib/init.lua'
 
 server_scripts {
   'init.lua',
-  'runtime/server/sv_*.lua',
+  'server.lua',
 }
 
 client_scripts {
   'init.lua',
-  'runtime/client/cl_*.lua',
+  'client.lua',
 }
 
 files {
